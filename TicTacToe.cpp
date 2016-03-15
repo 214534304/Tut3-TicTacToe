@@ -40,9 +40,60 @@ void TicTacToe:: input(){
 
 void TicTacToe::Toggleplayer(){
 
-
+	if (player == 'X')
+		player = 'O';
+	else
+		player = 'X';
 }
+
+//now we selecting the winner
 char TicTacToe::over(){
+
+	//first player
+
+	if (matrix[0][0] == player && matrix[0][1] == player && matrix[0][2] == player)
+		return player;
+	if (matrix[1][0] == player && matrix[1][1] == player && matrix[1][2] == player)
+		return player;
+    if (matrix[2][0] == player && matrix[2][1] == player && matrix[2][2] == player)
+			return player;
+	if (matrix[0][0] == player && matrix[1][0] == player && matrix[2][0] == player)
+		return player;
+
+	if (matrix[0][0] == player && matrix[1][0] == player && matrix[2][0] == player)
+		return player;
+	if (matrix[0][1] == player && matrix[1][1] == player && matrix[2][1] == player)
+		return player;
+	if (matrix[0][2] == player && matrix[1][2] == player && matrix[2][2] == player)
+		return player;
+
+	if (matrix[0][0] == player && matrix[1][1] == player && matrix[2][2] == player)
+		return player;
+	if (matrix[2][0] == player && matrix[1][1] == player && matrix[0][2] == player)
+		return player;
+
+	//second player
+	if (matrix[0][0] == 'O' && matrix[0][1] == 'O' && matrix[0][2] == 'O')
+		return 'O';
+	if (matrix[1][0] == 'O' && matrix[1][1] == 'O' && matrix[1][2] == 'O')
+		return 'O';
+	if (matrix[2][0] == 'O' && matrix[2][1] == 'O' && matrix[2][2] == 'O')
+		return 'O';
+	if (matrix[0][0] == 'O' && matrix[1][0] == 'O' && matrix[2][0] == 'O')
+		return 'O';
+
+	if (matrix[0][0] == 'O' && matrix[1][0] == 'O' && matrix[2][0] == 'O')
+		return 'O';
+	if (matrix[0][1] == 'O' && matrix[1][1] == 'O' && matrix[2][1] == 'O')
+		return 'O';
+	if (matrix[0][2] == 'O' && matrix[1][2] == 'O' && matrix[2][2] == 'O')
+		return 'O';
+
+	if (matrix[0][0] == 'O' && matrix[1][1] == 'O' && matrix[2][2] == 'O')
+		return 'O';
+	if (matrix[2][0] == 'O' && matrix[1][1] == 'O' && matrix[0][2] == 'O')
+		return 'O';
+	return'/';
 }
 
 
