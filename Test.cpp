@@ -4,11 +4,11 @@
 using namespace std;
 
 int main(){
-	TicTacToe tic1;
+	TicTacToe tic1;            //creating an object 
 
 	tic1.Draw();
 	while (1){
-		tic1.input();
+		tic1.input();     //calling my methods 
 		tic1.Draw();
 		if (tic1.over() == 'X'){
 			cout << "X wins!" << endl;                       //selecting a winner
