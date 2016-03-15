@@ -11,7 +11,7 @@ int main(){
 		tic1.input();
 		tic1.Draw();
 		if (tic1.over() == 'X'){
-			cout << "X wins!" << endl;
+			cout << "X wins!" << endl;                       //selecting a winner
 			break;
 			}
 		else if (tic1.over() == 'O'){
